@@ -111,6 +111,7 @@ $registry->addStudent($student2);
 
 echo $registry->getById(1)?->getName(); // Dorota
 $registry->removeStudentById(2);
+```
 
 ## 🧪 Example Test (PHPUnit)
 ```php
