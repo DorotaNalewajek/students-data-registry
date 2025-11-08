@@ -62,7 +62,7 @@ PHPUnit 11.x by Sebastian Bergmann
 ....                                                           4 / 4 (100%)
 
 OK (4 tests, 10 assertions)
-
+```
 ---
 # 🎓 Students Data Registry (PHP OOP + PHPUnit)
 
@@ -107,10 +107,11 @@ StudentsDataRegistry/
 ├── composer.json
 └── .gitignore
 
-
+```
 ---
 
-## 🚀 Running the Project
+
+### 🚀 Running the Project
 
 1️⃣ Install dependencies  
 ```bash
