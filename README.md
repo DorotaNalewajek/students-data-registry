@@ -141,7 +141,7 @@ public function testAddStudentInsertsWhenIdFree(): void
 📒 PSR-4 autoloading
 📒 Composer configuration
 
-⸻
+
 
 ## ✨ Author
 
