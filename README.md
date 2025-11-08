@@ -67,12 +67,17 @@ Implemented with:
 1️⃣ Install dependencies  
 ```bash
 composer install
+```
 
 2️⃣ Generate autoloader
+```bash
 composer dump-autoload -o
+```
 
-3️⃣ Run all tests
+3️⃣ Run all testsv
+```bash
 vendor/bin/phpunit
+```
 
 4️⃣ Expected output
 PHPUnit 11.x by Sebastian Bergmann
@@ -106,7 +111,6 @@ $registry->addStudent($student2);
 echo $registry->getById(1)?->getName(); // Dorota
 $registry->removeStudentById(2);
 
-```
 ## 🧪 Example Test (PHPUnit)
 ```php
 public function testAddStudentInsertsWhenIdFree(): void
