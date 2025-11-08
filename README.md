@@ -130,13 +130,16 @@ public function testAddStudentInsertsWhenIdFree(): void
 
 ```
 
-## 🧠 Concepts Practiced\
-OOP design in PHP
-Type safety & return types
-Dependency isolation
-Automated testing
-PSR-4 autoloading
-Composer configuration
+## 🧠 Concepts Practiced
+
+📒 OOP design in PHP
+📒 Type safety & return types
+📒 Dependency isolation
+📒 Automated testing
+📒Automated testing
+📒Automated testing
+📒 PSR-4 autoloading
+📒 Composer configuration
 
 ⸻
 
