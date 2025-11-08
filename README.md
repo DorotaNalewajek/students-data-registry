@@ -25,14 +25,17 @@ Everything is written in a clean, readable, pastel style 🌸
 ## 📁 Project Structure
 
 StudentsDataRegistry/
-├── src/
-│   ├── Student.php
-│   └── StudentsRegistry.php
-├── tests/
-│   ├── StudentTest.php
-│   └── StudentsRegistryTest.php
-├── composer.json
-└── .gitignore
+├── 📂 src/
+│   ├── 🧩 Student.php
+│   └── 🗂️ StudentsRegistry.php
+│
+├── 🧪 tests/
+│   ├── 🎓 StudentTest.php
+│   └── 📘 StudentsRegistryTest.php
+│
+├── 📦 composer.json
+├── ⚙️ .gitignore
+└── 🩵 README.md
 
 
 ---
@@ -90,12 +93,12 @@ OK (4 tests, 10 assertions)
 
 ## 🧠 Key Features
 	
-	- ➕ Add new students  
-	- 🚫 Prevent duplicate IDs  
-	- 🎯 Validate grades (1–6)  
-	- 🔍 Find student by ID  
-	- 🗑️ Remove existing student  
-	- 🧾 Get all students  
+	➕ Add new students  
+	🚫 Prevent duplicate IDs  
+	🎯 Validate grades (1–6)  
+	🔍 Find student by ID  
+	🗑️ Remove existing student  
+	🧾 Get all students  
 
 
 ## 💡 Example Usage
@@ -126,13 +129,14 @@ public function testAddStudentInsertsWhenIdFree(): void
 }
 
 ```
+
 ## 🧠 Concepts Practiced
-	•	OOP design in PHP
-	•	Type safety & return types
-	•	Dependency isolation
-	•	Automated testing
-	•	PSR-4 autoloading
-	•	Composer configuration
+	OOP design in PHP
+	Type safety & return types
+	Dependency isolation
+	Automated testing
+	PSR-4 autoloading
+	Composer configuration
 
 ⸻
 
