@@ -1,7 +1,39 @@
+<h1 align="center">🎀 Students Data Registry</h1>
+<p align="center">
+  <i>A minimal, pastel-colored PHP OOP project with unit testing 💡</i><br><br>
+  <img src="https://img.shields.io/badge/PHP-8.4-91c8e4?style=flat-square&logo=php&logoColor=white"/>
+  <img src="https://img.shields.io/badge/PHPUnit-11.5-ffb3c1?style=flat-square&logo=testinglibrary&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Composer-Autoload-ffd6a5?style=flat-square&logo=composer&logoColor=white"/>
+  <img src="https://img.shields.io/badge/OOP-Classes-ffc6ff?style=flat-square"/>
+</p>
+
+---
+
 # 🎓 Students Data Registry (PHP OOP + PHPUnit)
 
-A simple **object-oriented PHP project** that manages a registry of students — including their names, IDs, and grades.  
-Built to demonstrate clean OOP design, PSR-4 autoloading, and automated testing with PHPUnit.  
+This small **PHP OOP project** represents a data registry system for students.  
+It lets you add, remove, and retrieve students — along with their grades — while practicing:
+- Encapsulation  
+- Type safety  
+- PSR-4 autoloading  
+- Automated unit testing with PHPUnit  
+
+Everything is written in a clean, readable, pastel style 🌸  
+
+---
+
+## 📁 Project Structure
+
+StudentsDataRegistry/
+├── src/
+│   ├── Student.php
+│   └── StudentsRegistry.php
+├── tests/
+│   ├── StudentTest.php
+│   └── StudentsRegistryTest.php
+├── composer.json
+└── .gitignore
+
 
 ---
 
@@ -29,21 +61,8 @@ Implemented with:
 
 ---
 
-## 📁 Project Structure
 
-StudentsDataRegistry/
-├── src/
-│   ├── Student.php
-│   └── StudentsRegistry.php
-├── tests/
-│   ├── StudentTest.php
-│   └── StudentsRegistryTest.php
-├── composer.json
-└── .gitignore
-
-
-
-## 🚀 Running the Project
+## 🚀💓 Running the Project
 
 1️⃣ Install dependencies  
 ```bash
@@ -64,16 +83,14 @@ OK (4 tests, 10 assertions)
 ```
 
 ## 🧠 Key Features
+	
+	- ➕ Add new students  
+	- 🚫 Prevent duplicate IDs  
+	- 🎯 Validate grades (1–6)  
+	- 🔍 Find student by ID  
+	- 🗑️ Remove existing student  
+	- 🧾 Get all students  
 
-	•	Add and remove students dynamically
-	•	Reject duplicate IDs
-	•	Validate grade values (1–6 only)
-	•	Retrieve single student by ID (getById)
-	•	Retrieve full list (all)
-	•	Tested edge cases:
-	•	Empty registry
-	•	Duplicate insertions
-	•	Removing non-existing students
 
 ## 💡 Example Usage
 
@@ -87,6 +104,7 @@ $registry->addStudent($student2);
 
 echo $registry->getById(1)?->getName(); // Dorota
 $registry->removeStudentById(2);
+
 
 ## 🧪 Example Test (PHPUnit)
 
@@ -113,12 +131,26 @@ public function testAddStudentInsertsWhenIdFree(): void
 ## ✨ Author
 
 Dorota Nalewajek
-💼 Future AI / Data Developer & passionate learner
+💼 Future AI / Data Developer & passionate learner / 🌸 passionate about clean code & structure
 📫 LinkedIn￼ • GitHub￼
+
+<p align="center">
+  <a href="https://github.com/DorotaNalewajek">
+    <img src="https://img.shields.io/badge/GitHub-DorotaNalewajek-91c8e4?style=flat-square&logo=github&logoColor=white"/>
+  </a>
+  <a href="https://linkedin.com/in/dorota-nalewajek">
+    <img src="https://img.shields.io/badge/LinkedIn-Dorota%20Nalewajek-ffb3c1?style=flat-square&logo=linkedin&logoColor=white"/>
+  </a>
+</p>
+
 
 ## 🩵 License
 
 MIT License © 2025 Dorota Nalewajek
 Feel free to fork, use and learn from this project!
+
+ <h3 align="center">🩵 MIT License © 2025 Dorota Nalewajek 🩵</h3>
+<p align="center"><i>Feel free to fork, star ⭐️, and use for learning!</i></p>
+```
 
 
