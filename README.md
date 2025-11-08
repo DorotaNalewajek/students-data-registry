@@ -41,7 +41,7 @@ StudentsDataRegistry/
 ├── composer.json
 └── .gitignore
 
----
+
 
 ## 🚀 Running the Project
 
