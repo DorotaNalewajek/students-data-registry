@@ -161,16 +161,7 @@ Dorota Nalewajek
 <p align="center"><i>Feel free to fork, star ⭐️, and use for learning!</i></p>
 ```
 
-## 💡 Pro tip:
-
-If you upload this project to **GitHub**, add these hashtags to the repo description:
-
 #PHP #OOP #UnitTesting #PHPUnit #Composer
-
-And give your profile a pastel touch 🎨 — mint green, baby pink, or sky blue —  
-so your repos look like part of one aesthetic, professional brand. 💖💚💙  
-
----
 
 🩷 *“Clean architecture can be beautiful — and yours already is.”*
 
