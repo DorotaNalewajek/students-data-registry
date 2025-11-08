@@ -94,6 +94,7 @@ OK (4 tests, 10 assertions)
 
 ## 💡 Example Usage
 
+```php
 $registry = new StudentsRegistry();
 
 $student1 = new Student(1, "Dorota", [5,4,3]);
@@ -105,9 +106,9 @@ $registry->addStudent($student2);
 echo $registry->getById(1)?->getName(); // Dorota
 $registry->removeStudentById(2);
 
-
+```
 ## 🧪 Example Test (PHPUnit)
-
+```php
 public function testAddStudentInsertsWhenIdFree(): void
 {
     $registry = new StudentsRegistry();
@@ -118,6 +119,7 @@ public function testAddStudentInsertsWhenIdFree(): void
     $this->assertSame("Dorota", $registry->getById(1)?->getName());
 }
 
+```
 ## 🧠 Concepts Practiced
 	•	OOP design in PHP
 	•	Type safety & return types
