@@ -80,6 +80,7 @@ vendor/bin/phpunit
 ```
 
 4️⃣ Expected output
+```php
 PHPUnit 11.x by Sebastian Bergmann
 
 ....                                                           4 / 4 (100%)
