@@ -146,9 +146,6 @@ Dorota Nalewajek
 
 ## 🩵 License
 
-MIT License © 2025 Dorota Nalewajek
-Feel free to fork, use and learn from this project!
-
  <h3 align="center">🩵 MIT License © 2025 Dorota Nalewajek 🩵</h3>
 <p align="center"><i>Feel free to fork, star ⭐️, and use for learning!</i></p>
 ```
