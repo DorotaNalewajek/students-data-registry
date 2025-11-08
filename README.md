@@ -132,7 +132,6 @@ public function testAddStudentInsertsWhenIdFree(): void
 
 Dorota Nalewajek
 💼 Future AI / Data Developer & passionate learner / 🌸 passionate about clean code & structure
-📫 LinkedIn￼ • GitHub￼
 
 <p align="center">
   <a href="https://github.com/DorotaNalewajek">
@@ -142,9 +141,6 @@ Dorota Nalewajek
     <img src="https://img.shields.io/badge/LinkedIn-Dorota%20Nalewajek-ffb3c1?style=flat-square&logo=linkedin&logoColor=white"/>
   </a>
 </p>
-
-
-## 🩵 License
 
  <h3 align="center">🩵 MIT License © 2025 Dorota Nalewajek 🩵</h3>
 <p align="center"><i>Feel free to fork, star ⭐️, and use for learning!</i></p>
