@@ -64,6 +64,75 @@ PHPUnit 11.x by Sebastian Bergmann
 OK (4 tests, 10 assertions)
 
 ---
+# 🎓 Students Data Registry (PHP OOP + PHPUnit)
+
+A simple **object-oriented PHP project** that manages a registry of students — including their names, IDs, and grades.  
+Built to demonstrate clean OOP design, PSR-4 autoloading, and automated testing with PHPUnit.  
+
+---
+
+## 🧩 Project Overview
+
+The project models a small data registry:
+- **`Student`** – represents a single student (ID, name, grades)
+- **`StudentsRegistry`** – stores, retrieves, and removes students
+
+Implemented with:
+- Encapsulation and type hints (`int|string`, `?Student`, `array`)
+- Separation of concerns (`src/` vs `tests/`)
+- Full PHPUnit test coverage
+
+---
+
+## ⚙️ Technologies
+
+| Tool / Library | Purpose |
+|----------------|----------|
+| 🐘 PHP 8.4+ | Main language |
+| 🧪 PHPUnit 11 | Unit testing |
+| 📦 Composer | Dependency management |
+| 🧭 PSR-4 | Autoloading standard |
+
+---
+
+## 📁 Project Structure
+
+StudentsDataRegistry/
+├── src/
+│   ├── Student.php
+│   └── StudentsRegistry.php
+├── tests/
+│   ├── StudentTest.php
+│   └── StudentsRegistryTest.php
+├── composer.json
+└── .gitignore
+
+
+---
+
+## 🚀 Running the Project
+
+1️⃣ Install dependencies  
+```bash
+composer install
+
+2️⃣ Generate autoloader
+```bash
+composer dump-autoload -o
+
+3️⃣ Run all tests
+```bash
+vendor/bin/phpunit
+
+4️⃣ Expected output
+PHPUnit 11.x by Sebastian Bergmann
+
+....                                                           4 / 4 (100%)
+
+OK (4 tests, 10 assertions)
+```
+
+---
 
 ## 🧠 Key Features
 
@@ -77,8 +146,7 @@ OK (4 tests, 10 assertions)
 	•	Duplicate insertions
 	•	Removing non-existing students
 
-
-💡 Example Usage
+## 💡 Example Usage
 
 $registry = new StudentsRegistry();
 
@@ -91,7 +159,7 @@ $registry->addStudent($student2);
 echo $registry->getById(1)?->getName(); // Dorota
 $registry->removeStudentById(2);
 
-🧪 Example Test (PHPUnit)
+## 🧪 Example Test (PHPUnit)
 
 public function testAddStudentInsertsWhenIdFree(): void
 {
@@ -103,7 +171,7 @@ public function testAddStudentInsertsWhenIdFree(): void
     $this->assertSame("Dorota", $registry->getById(1)?->getName());
 }
 
-🧠 Concepts Practiced
+## 🧠 Concepts Practiced
 	•	OOP design in PHP
 	•	Type safety & return types
 	•	Dependency isolation
@@ -113,14 +181,15 @@ public function testAddStudentInsertsWhenIdFree(): void
 
 ⸻
 
-✨ Author
+## ✨ Author
 
 Dorota Nalewajek
 💼 Future AI / Data Developer & passionate learner
 📫 LinkedIn￼ • GitHub￼
 
-🩵 License
+## 🩵 License
 
 MIT License © 2025 Dorota Nalewajek
 Feel free to fork, use and learn from this project!
+
 
