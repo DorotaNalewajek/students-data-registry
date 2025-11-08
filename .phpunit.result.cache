@@ -1,0 +1,1 @@
+{"version":2,"defects":{"App\\Tests\\StudentsRegistryTest::testAddStudentInsertsWhenIdFree":7,"App\\Tests\\StudentsRegistryTest::testAddStudentRejectsDuplicateId":8},"times":{"App\\Tests\\StudentsRegistryTest::testAddStudentInsertsWhenIdFree":0.004,"App\\Tests\\StudentsRegistryTest::testAddStudentRejectsDuplicateId":0}}
