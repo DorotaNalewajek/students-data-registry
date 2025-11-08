@@ -92,13 +92,13 @@ OK (4 tests, 10 assertions)
 ```
 
 ## 🧠 Key Features
-	
-	➕ Add new students  
-	🚫 Prevent duplicate IDs  
-	🎯 Validate grades (1–6)  
-	🔍 Find student by ID  
-	🗑️ Remove existing student  
-	🧾 Get all students  
+
+➕ Add new students  
+🚫 Prevent duplicate IDs  
+🎯 Validate grades (1–6)  
+🔍 Find student by ID  
+🗑️ Remove existing student  
+🧾 Get all students  
 
 
 ## 💡 Example Usage
