@@ -39,10 +39,11 @@ class StudentsRegistry
         return false;
     }
 
-    public function all(array <Student>)
+    /** @return Student[] */
+    public function all(): array
+    {
+        return  array_values($this->studentsById);
+    }
+
+
 }
-
-
-    
-
-

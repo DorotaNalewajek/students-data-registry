@@ -31,7 +31,7 @@ class Student  /*wymuszenie typu argumentu*/
     public function addGrade(int $grade){
             if ($grade >= 1 && $grade <= 6){
                 $this->grades[] = $grade ;
-                    return True;}
+                    return true;}
             return false;
                     }
                 
@@ -43,7 +43,7 @@ class Student  /*wymuszenie typu argumentu*/
     public function averageGrade(): float|string
     {
         if (count($this->grades) === 0){
-            throw new Exception("No grades for: {$this->name}");
+            throw new \Exception("No grades for: {$this->name}");
         }
         return round(array_sum($this->grades)/count($this->grades) ,2);
     }
