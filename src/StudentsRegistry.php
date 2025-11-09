@@ -30,6 +30,16 @@ class StudentsRegistry
         return null;
     }
 
+    public function removeStudentById(int|string $id ) : bool
+    {
+        if (isset($this->studentsById[$id])){
+            unset($this->studentsById[$id]);
+            return true;
+        }
+        return false;
+    }
+
+    public function all(array <Student>)
 }
 
 
