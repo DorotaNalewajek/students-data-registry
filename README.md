@@ -1,4 +1,4 @@
-<h1 align="center">🎀 Students Data Registry</h1>
+<h1 align="center"> Students Data Registry</h1>
 <p align="center">
   <i>A minimal, pastel-colored PHP OOP project with unit testing 💡</i><br><br>
   <img src="https://img.shields.io/badge/PHP-8.4-91c8e4?style=flat-square&logo=php&logoColor=white"/>
@@ -16,9 +16,7 @@ It lets you add, remove, and retrieve students — along with their grades — w
 - Encapsulation  
 - Type safety  
 - PSR-4 autoloading  
-- Automated unit testing with PHPUnit  
-
-Everything is written in a clean, readable, pastel style 🌸  
+- Automated unit testing with PHPUnit 
 
 ---
 
@@ -65,7 +63,7 @@ Implemented with:
 ---
 
 
-## 🚀💓 Running the Project
+## 🚀 Running the Project
 
 1️⃣ Install dependencies  
 ```bash
@@ -157,11 +155,11 @@ Dorota Nalewajek
   </a>
 </p>
 
- <h3 align="center">🩵 MIT License © 2025 Dorota Nalewajek 🩵</h3>
+ <h3 align="center"> MIT License © 2025 Dorota Nalewajek </h3>
 <p align="center"><i>Feel free to fork, star ⭐️, and use for learning!</i></p>
 ```
 
 #PHP #OOP #UnitTesting #PHPUnit #Composer
 
-🩷 *“Clean architecture can be beautiful — and yours already is.”*
+ *“Clean architecture can be beautiful — and yours already is.”*
 
