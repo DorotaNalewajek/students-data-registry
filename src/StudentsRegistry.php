@@ -45,5 +45,17 @@ class StudentsRegistry
         return  array_values($this->studentsById);
     }
 
+    public function count() : int
+    {
+        return count($this->studentsById); 
+    }
 
-}
+    public function exists( int $id) : bool
+    {
+        if (isset($this->studentsById[$id])){
+                return true;
+        }
+        return false;
+    }
+
+}   

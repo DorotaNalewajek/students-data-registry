@@ -51,5 +51,6 @@ class Student  /*wymuszenie typu argumentu*/
     {
         return "ID: {$this->id}, Name & Surname: {$this->name}, GRADES: {$this->grades}";
     }
+   
 }
 
