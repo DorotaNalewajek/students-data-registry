@@ -58,4 +58,15 @@ class StudentsRegistry
         return false;
     }
 
+    public function rename(int $id, string $newName) : bool
+    {
+        if (isset($this->studentsById[$id])){
+            $this->studentsById[$id]->setName($newName);{
+                return true;
+        }
+        return false;
+            }
+    
+    }
+
 }   

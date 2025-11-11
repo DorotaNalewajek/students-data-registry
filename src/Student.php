@@ -47,10 +47,20 @@ class Student  /*wymuszenie typu argumentu*/
         }
         return round(array_sum($this->grades)/count($this->grades) ,2);
     }
-    public function __toString(): string
+
+    public function setName(string $newName): bool
     {
-        return "ID: {$this->id}, Name & Surname: {$this->name}, GRADES: {$this->grades}";
+        $trimmed = trim($newName);{
+        if (strlen($trimmed) <50 && strlen($trimmed )>0 ){
+            $this->name = $trimmed;
+            return true;
+                return false;
+        }
+        }
     }
-   
 }
 
+    // public function __toString(): string
+    // {
+    //     return "ID: {$this->id}, Name & Surname: {$this->name}, GRADES: {$this->grades}";
+    // }

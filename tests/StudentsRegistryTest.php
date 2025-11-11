@@ -140,4 +140,28 @@ final class StudentsRegistryTest extends TestCase
         $this->assertTrue($registry->exists(2));
         $this->assertFalse($registry->exists(5));
     }
+
+    public function renameSearchByIdReturnsTrueWhenNameChanged(): void
+    {
+        $registry = new StudentsRegistry();
+        $s1 = new Student(1, "Dorota", []);
+        $s2 = new Student(2, "Ann", []);
+        $s3 = new Student(3, "Krystian", []);
+
+        $this->assertTrue($registry->addStudent($s1));
+        $this->assertTrue($registry->addStudent($s2));
+        $this->assertTrue($registry->addStudent($s3));
+
+        $this->assertTrue($registry->rename(1, 'Zuza'));
+        $this->assertFalse($registry->rename(999 , 'Zosia'));
+        
+        $this->assertTrue($registry->rename(2, '   Ann.     '));
+        $this->assertFalse($registry->rename(3, 'vbccvbnjdfnvjkdfnvbkldfgjbnkfgljblkgfbmlfgkbnmfgkbnmlgfnmlghnmghl;nmghl;nmlgh;mn;lghmnl;ghmnlgh;nm'));
+        $this->assertSame('Krystian', $registry->getByID(3)?->getName());
+        $this->assertSame('Zuza', $registry->getById(1)?->getName());
+        $this->assertFalse($registry->rename(3, '      '));
+        $this->assertSame('Krystian', $registry->getById(3)?->getName());
+
+
+    }
 }
