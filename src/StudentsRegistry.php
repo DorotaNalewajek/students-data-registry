@@ -1,5 +1,6 @@
 <?php
-declare(strict_types = 1);
+declare(strict_types=1);
+
 namespace App;
 
 use App\Student;
@@ -13,26 +14,26 @@ class StudentsRegistry
     {
         $this->studentsById = [];
     }
-    public function addStudent(Student $student) : bool
+    public function addStudent(Student $student): bool
     {
         $id = $student->getId();
-        if (isset($this->studentsById[$id])){
+        if (isset($this->studentsById[$id])) {
                 return false;
             }
         $this->studentsById[$id] = $student;
         return true;
     }
-    public function getById(int|string $id) : ?Student
+    public function getById(int|string $id): ?Student
     {
-        if (isset($this->studentsById[$id])){
+        if (isset($this->studentsById[$id])) {
             return $this->studentsById[$id];
         }
         return null;
     }
 
-    public function removeStudentById(int|string $id ) : bool
+    public function removeStudentById(int|string $id ): bool
     {
-        if (isset($this->studentsById[$id])){
+        if (isset($this->studentsById[$id])) {
             unset($this->studentsById[$id]);
             return true;
         }
@@ -42,15 +43,15 @@ class StudentsRegistry
     /** @return Student[] */
     public function all(): array
     {
-        return  array_values($this->studentsById);
+        return array_values($this->studentsById);
     }
 
-    public function count() : int
+    public function count(): int
     {
-        return count($this->studentsById); 
+        return count($this->studentsById);
     }
 
-    public function exists( int $id) : bool
+    public function exists(int $id): bool
     {
         if (isset($this->studentsById[$id])){
                 return true;
@@ -58,7 +59,7 @@ class StudentsRegistry
         return false;
     }
 
-    public function rename(int $id, string $newName) : bool
+    public function rename(int $id, string $newName): bool
     {
         if (isset($this->studentsById[$id])){
             $this->studentsById[$id]->setName($newName);{
@@ -69,24 +70,24 @@ class StudentsRegistry
     
     }
 
-    public function addGrade(int | string $id ,  int| string $grade) : bool
+    public function addGrade(int | string $id ,  int| string $grade): bool
     {
-        if (!isset($this->studentsById[$id])){
+        if (!isset($this->studentsById[$id])) {
             return false;
         }
         return $this->studentsById[$id]->addGrade($grade);
             
 }
 
-    public function addGrades(int | string $id, array $grades) : bool 
+    public function addGrades(int | string $id, array $grades): bool 
     {
         if (!($this->exists($id))){
             return false;
         }
-        return  $this->studentsById[$id]->addGrades($grades);  
+        return  $this->studentsById[$id]->addGrades($grades);
     }
 
-    public function averageGrades( int | string $id ) : float | bool
+    public function averageGrades( int | string $id ): float|bool
     {
         if (!($this->exists($id))){
             return false;

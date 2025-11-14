@@ -1,14 +1,13 @@
 <?php
-declare(strict_types =1 );
+declare(strict_types=1);
 
 namespace App\Tests;
 
 use App\Student;
 use App\StudentsRegistry;
-use PhpParser\Node\Expr\FuncCall;
 use PHPUnit\Framework\TestCase;
 use Exception;
-$this->expectException(Exception::class);
+
 
 final class StudentsRegistryTest extends TestCase
 {
@@ -33,11 +32,11 @@ final class StudentsRegistryTest extends TestCase
         $s1 = new Student(1, "Dorota", []);
         $s2 = new Student(1, "Krystian", []);
 
-        $this->assertTrue($registry->addStudent($s1));  //Dodaj studenta Dorotę (id 1) → powinno być true//
-        $this->assertSame($s1, $registry->getById(1));   //Sprawdź, że siedzi w środku//
-        $this->assertSame("Dorota", $registry->getById(1)?->getName()); //Sprawdź, że ma imię Dorota//
-        $this->assertFalse($registry->addStudent($s2)); // /*Spróbuj dodać Krystiana z tym samym id → false*/
-        $this->assertSame("Dorota", $registry->getById(1)?->getName()); // wciąż ten pierwszy// duplikat ID //Sprawdź, że Dorota nadal tam jest i nic się nie nadpisało//
+        $this->assertTrue($registry->addStudent($s1));  // Dodaj studenta Dorotę (id 1) → powinno być true //
+        $this->assertSame($s1, $registry->getById(1));   // Sprawdź, że siedzi w środku //
+        $this->assertSame("Dorota", $registry->getById(1)?->getName()); //Sprawdź, że ma imię Dorota //
+        $this->assertFalse($registry->addStudent($s2)); // Spróbuj dodać Krystiana z tym samym id → false //
+        $this->assertSame("Dorota", $registry->getById(1)?->getName()); // wciąż ten pierwszy// duplikat ID //Sprawdź, że Dorota nadal tam jest i nic się nie nadpisało //
     }
 
     public function testGetByIdReturnsStudentOrNull(): void
@@ -61,7 +60,7 @@ final class StudentsRegistryTest extends TestCase
         // $this->assertSame('Ann', $found?->getName());
     }
     
-    public function testRemoveStudentByIdRemovesAndReturnTrue() : void
+    public function testRemoveStudentByIdRemovesAndReturnTrue(): void
     {
         $registry = new StudentsRegistry();
         $s1 = new Student(1, "Dorota", []);
@@ -76,7 +75,7 @@ final class StudentsRegistryTest extends TestCase
         $this->assertFalse($registry->removeStudentById(3));
     }
 
-    public function testAllReturnsAllStudents() : void
+    public function testAllReturnsAllStudents(): void
     {
         $registry = new StudentsRegistry();
         $s1 = new Student(1, "Dorota", []);
@@ -200,6 +199,8 @@ final class StudentsRegistryTest extends TestCase
 
         $this->assertSame(4.25, $registry->averageGrades(1));
         $this->assertFalse($registry->averageGrades(2));
+
+        $this->expectException(Exception::class);
         $this->expectExceptionMessage(('No grades for: Ann'), $registry->averageGrades(999));
     }
 }
