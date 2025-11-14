@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+declare(strict_types = 1);
 namespace App;
 
 use App\Student;
@@ -68,5 +68,37 @@ class StudentsRegistry
             }
     
     }
+
+    public function addGrade(int | string $id ,  int| string $grade) : bool
+    {
+        if (!isset($this->studentsById[$id])){
+            return false;
+        }
+        return $this->studentsById[$id]->addGrade($grade);
+            
+}
+
+    public function addGrades(int | string $id, array $grades) : bool 
+    {
+        if (!($this->exists($id))){
+            return false;
+        }
+        return  $this->studentsById[$id]->addGrades($grades);  
+    }
+
+    public function averageGrades( int | string $id ) : float | bool
+    {
+        if (!($this->exists($id))){
+            return false;
+        }
+        $this->studentsById[$id]->getGrades();
+            return $this-> studentsById[$id]->averageGrade();
+    }
+
+    public function withAverageAtLeast(float $min): array 
+    {
+
+    }
+
 
 }   

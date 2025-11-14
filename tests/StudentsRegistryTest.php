@@ -1,18 +1,21 @@
 <?php
-declare(strict_types=1);
+declare(strict_types =1 );
 
 namespace App\Tests;
 
 use App\Student;
 use App\StudentsRegistry;
+use PhpParser\Node\Expr\FuncCall;
 use PHPUnit\Framework\TestCase;
+use Exception;
+$this->expectException(Exception::class);
 
 final class StudentsRegistryTest extends TestCase
 {
     public function testAddStudentInsertsWhenIdFree(): void
     {
         $registry = new StudentsRegistry();
-        $s1  = new Student(1, "Dorota", [5,4,3]);
+        $s1  = new Student(1, "Dorota", [5, 4, 3]);
         $s2 = new Student(2, "Krystian", []);
 
         // weryfikacja, że student faktycznie siedzi w rejestrze
@@ -161,7 +164,42 @@ final class StudentsRegistryTest extends TestCase
         $this->assertSame('Zuza', $registry->getById(1)?->getName());
         $this->assertFalse($registry->rename(3, '      '));
         $this->assertSame('Krystian', $registry->getById(3)?->getName());
+    }
 
+    public function testAddGradeReturnsTrueWhenAdded(): void
+    {
+        $registry = new StudentsRegistry();
+        $s1 = new Student(1, "Dorota", [5]);
+        $this->assertTrue($registry->addStudent($s1));
 
+        $this->assertTrue( $registry->addGrade(1, 5))?->getGrades();
+        $this->assertFalse($registry->addGrade(999,4));
+        $this->assertFalse($registry->addGrade(1, 0));
+    }
+
+    public function testAddGradesReturnTrueWhenAddedCorrectly(): void
+    {
+        $registry = new StudentsRegistry();
+        $s1 = new Student(1, "Dorota", [5]);
+        $this->assertTrue($registry->addStudent($s1));
+
+        $this->assertTrue($registry->addGrades(1, [1, 2, 3]));
+        $this->assertFalse($registry->addGrades(2,[5, 5]));
+        $this->assertFalse($registry->addGrades(1,[1, 8]));
+    }
+
+    public function testAverageGreradesReturnsFloat(): void
+    {
+        $registry = new StudentsRegistry();
+        $s1 = new Student(1, "Dorota", [5,2,4,6]);
+        $s999 = new Student(999, "Ann", []);
+        $this->assertTrue($registry->addStudent($s1));
+        $this->assertTrue($registry->addStudent($s999));
+
+        $this->assertTrue(class_exists(\App\Student::class));
+
+        $this->assertSame(4.25, $registry->averageGrades(1));
+        $this->assertFalse($registry->averageGrades(2));
+        $this->expectExceptionMessage(('No grades for: Ann'), $registry->averageGrades(999));
     }
 }

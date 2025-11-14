@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+declare(strict_types = 1);
 namespace App;
 
 class Student  /*wymuszenie typu argumentu*/
@@ -28,17 +28,27 @@ class Student  /*wymuszenie typu argumentu*/
     return $this->grades;
     }
     
-    public function addGrade(int $grade){
-            if ($grade >= 1 && $grade <= 6){
-                $this->grades[] = $grade ;
-                    return true;}
-            return false;
-                    }
-                
-    public function addGrades($grades = []){
+    public function addGrade(int | string $grade) : bool
+    {
+        if ($grade < 1 || $grade > 6){
+        return false;
+        }
+        $this->grades[] = $grade ; 
+            return true;
+}
+
+    public function addGrades( array $grades) : bool
+    {
         foreach ($grades as $grade){
-                $this -> addGrade($grade); 
-        }}
+            if ($grade < 1 || $grade > 6 ){
+            return false;
+            }
+        }
+        foreach ($grades as $grade){
+            $this->addGrade($grade);
+        }
+        return true;
+}
 
     public function averageGrade(): float|string
     {
@@ -51,11 +61,12 @@ class Student  /*wymuszenie typu argumentu*/
     public function setName(string $newName): bool
     {
         $trimmed = trim($newName);{
-        if (strlen($trimmed) <50 && strlen($trimmed )>0 ){
+        if (strlen($trimmed) < 50 && strlen($trimmed ) > 0 ){
             $this->name = $trimmed;
             return true;
-                return false;
         }
+                return false;
+
         }
     }
 }
