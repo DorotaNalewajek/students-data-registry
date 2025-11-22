@@ -20,6 +20,18 @@ $registry->addStudent($student3);
 $registry->addStudent($student4);
 $registry->addStudent($student5);
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $name = $_POST[$registry[$name]]?? null;
+    $gradesRaw = $_POST[$registry[$grades]]?? null;
+    $newGrades = explode(',', $gradesRaw);
+    $grades = [];
+    foreach ($newGrades as $gr){
+        $grTrim = trim($gr);
+        $grades[] = $grTrim;
+    }
+
+}
+
 $studentsList = $registry->all();
 
 require_once __DIR__ . '/../templates/students_list.php';
